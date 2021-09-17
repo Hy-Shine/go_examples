@@ -17,7 +17,7 @@ func printLn(wg *sync.WaitGroup, c int) {
 	fmt.Println(c)
 }
 
-func main() {
+func wgHandle() {
 	var str string
 	N := len(myMap)
 	var wg sync.WaitGroup
