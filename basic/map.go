@@ -1,4 +1,4 @@
-package basic
+package main
 
 import "fmt"
 
@@ -6,18 +6,33 @@ import "fmt"
 // map[key_type]values_type
 
 // init map
-var listMap = map[int]string{1: "1", 2: "2", 3: "3"}
+// var listMap map[int]string
+var listMap map[int]string
 
 // equal
 // var listMap map[int]string
 // listMap = make(map[int]string)
-// or if the map in function, 
+// or if the map in function,
 // listMap := make(map[int]string)
 
-for k, v := range listMap {
-	fmt.Println(k, v)
-}
-
-if v,ok := listMap[key];ok{
-	fmt.Println(v)
+func mapRead() {
+	listMap = make(map[int]string)
+	listMap[1] = "One"
+	listMap[2] = "Two"
+	listMap[3] = "Three"
+	for k, v := range listMap {
+		fmt.Printf("key: %d, value: %s\n", k, v)
+	}
+	//init a map with ":="
+	listMap2 := make(map[int]string)
+	listMap2[5] = "Five"
+	listMap2[10] = "Ten"
+	for key := range listMap {
+		fmt.Printf("key: %d, value: %s\n", key, listMap[key])
+	}
+	//
+	key := 5
+	if v, ok := listMap2[key]; ok {
+		fmt.Println(v)
+	}
 }

@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	arg := 3
+	arg := 4
 	switch arg {
 	case 1:
 		multiArgs()
@@ -11,6 +11,8 @@ func main() {
 		pointerHandle()
 	case 3:
 		iotaX()
+	case 4:
+		mapRead()
 	default:
 		panic(fmt.Sprintln("arg mismatch"))
 	}
